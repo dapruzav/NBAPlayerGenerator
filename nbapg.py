@@ -1,3 +1,4 @@
+#======================================================================= Imports
 import selenium
 from selenium import webdriver
 
@@ -9,15 +10,15 @@ driver = webdriver.Chrome(PATH)
 URL = 'https://www.nba.com/players'
 driver.get(URL)
 
-content = driver.find_element_by_class_name('players-list')
+#======================================================================= Important variables for later use
 rowInfo = driver.find_element_by_class_name('Pagination_content__30uR3').text
 dropDown = driver.find_element_by_xpath('//*[@id="__next"]/div[2]/div[3]/section/div/div[2]/div[1]/div[7]/div/div[3]/div/label/div/select')
 of = rowInfo.find('of')
 pageCount = int(rowInfo[ of + 3 : ])
-rawInfo = content.text.splitlines()
 names = []
 playerInfo = []
 
+#======================================================================= Method used by flipping through all pages. About 5 seconds slower
 #i = 1
 #while i <= pageCount:
 #    content = driver.find_element_by_class_name('players-list')
@@ -31,6 +32,7 @@ playerInfo = []
 #            option.click()
 #            break      
 
+#======================================================================= Player names and info are pulled from the website and added to lists
 for option in dropDown.find_elements_by_tag_name('option'):
     if option.text == 'All':
         option.click()
@@ -41,8 +43,10 @@ for j in range(1, len(rawInfo), 3):
     names.append(rawInfo[j] + ' ' + rawInfo[j + 1])
     playerInfo.append(rawInfo[j + 2])
 
+#======================================================================= Close the web page
 driver.quit()
 
+#======================================================================= Start of main menu
 flag = True
 
 while flag:
