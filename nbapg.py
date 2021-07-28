@@ -11,10 +11,10 @@ URL = 'https://www.nba.com/players'
 driver.get(URL)
 
 #======================================================================= Important variables for later use
-rowInfo = driver.find_element_by_class_name('Pagination_content__30uR3').text
+pageInfo = driver.find_element_by_class_name('Pagination_content__30uR3').text
 dropDown = driver.find_element_by_xpath('//*[@id="__next"]/div[2]/div[3]/section/div/div[2]/div[1]/div[7]/div/div[3]/div/label/div/select')
-of = rowInfo.find('of')
-pageCount = int(rowInfo[ of + 3 : ])
+of = pageInfo.find('of')
+pageCount = int(pageInfo[ of + 3 : ])
 names = []
 playerInfo = []
 
