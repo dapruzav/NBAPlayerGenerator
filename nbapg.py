@@ -55,6 +55,8 @@ while flag:
 
     if userInput > 30:
         userInput = 30;
+    elif userInput < 1:
+        userInput = 1;
 
     for i in range(0, userInput):
         num = random.randint(0, len(names) - 1)
