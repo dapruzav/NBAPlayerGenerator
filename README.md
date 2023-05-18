@@ -12,7 +12,7 @@ Steps to Use:
   3. Add the selenium package to your project
 
 Here is a very helpful video to get started in PyCharm (you don't need to download a driver):
-https://www.youtube.com/watch?v=WgO5NjPWMhY&list=LL&index=1&t=468s
+https://youtu.be/WgO5NjPWMhY
 
 Relevant Documentation:
   - Unofficial Python In Selenium Documentation (https://selenium-python.readthedocs.io/index.html)
