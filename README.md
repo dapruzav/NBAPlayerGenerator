@@ -7,13 +7,12 @@ Features I would like to add:
   - Randomly generate players by team (ex. Heat, Hawks) from user input
 
 Steps to Use:
-  1. Install Python via the Python download site (https://www.python.org/downloads/)
+  1. Install Python via the [Python download site](https://www.python.org/downloads/)
   2. In terminal, type the command "pip install -U selenium" to download Selenium to your computer
   3. Add the selenium package to your project
 
-Here is a very helpful video to get started in PyCharm (you don't need to download a driver):
-https://youtu.be/WgO5NjPWMhY
+Here is a very helpful [video](https://youtu.be/WgO5NjPWMhY) to get started in PyCharm (you don't need to download a driver)
 
 Relevant Documentation:
-  - Unofficial Python In Selenium Documentation (https://selenium-python.readthedocs.io/index.html)
-  - Official Documentation (https://www.selenium.dev/)
+  - [Unofficial Python In Selenium Documentation](https://selenium-python.readthedocs.io/index.html)
+  - [Official Documentation](https://www.selenium.dev/)
